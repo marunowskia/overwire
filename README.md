@@ -10,6 +10,12 @@ Overwire handles all strings safely, but cannot serialize threads, userdata, or 
 
 Reference loops are handled properly, as shown in the demo below.
 
+
+Overwire output comes in the form of runnable Lua code which will reconstruct your original object.
+
+This is accomplished by reconstructing all of the literals in the input object, then arranging those literals back into the original object graph.
+
+
 TODO: I'd like to make a different version of overwire that has a more succinct serialization format (As close to the original as possible. Think JSON). 
 Hopefully I'll get around to that soon.
 
